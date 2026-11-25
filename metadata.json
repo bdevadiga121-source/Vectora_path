@@ -1,0 +1,11 @@
+{
+  "name": "Remix LogicFlow",
+  "description": "Build fully functional, custom software applications rapidly using an intuitive drag-and-drop visual interface.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

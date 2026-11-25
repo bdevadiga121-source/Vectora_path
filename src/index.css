@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #1a1a1f;
+    background-image:
+      radial-gradient(ellipse 65% 45% at 10% 0%, rgba(244, 166, 42, 0.09), transparent),
+      radial-gradient(ellipse 65% 45% at 92% 0%, rgba(106, 90, 205, 0.14), transparent),
+      linear-gradient(to right, rgba(240, 217, 181, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(240, 217, 181, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+    color: #f0d9b5;
+    letter-spacing: 0.005em;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Precision dark scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(166, 120, 185, 0.35);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(244, 166, 42, 0.65);
+  }
+}
+
+@keyframes view-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-stage-enter {
+  animation: view-enter 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes vectra-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes vectra-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes vectra-orbit-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes vectra-pulse-ring {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.07);
+    opacity: 0.28;
+  }
+  100% {
+    transform: scale(0.92);
+    opacity: 0.75;
+  }
+}
+
+@keyframes vectra-beam-sweep {
+  0% {
+    transform: translateX(-45%);
+    opacity: 0.12;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateX(145%);
+    opacity: 0.12;
+  }
+}
+
+@keyframes vectra-scene-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes vectra-dash-flow {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+
+.vectra-float {
+  animation: vectra-float 4.2s ease-in-out infinite;
+}
+
+.vectra-orbit {
+  animation: vectra-orbit 22s linear infinite;
+}
+
+.vectra-orbit-reverse {
+  animation: vectra-orbit-reverse 28s linear infinite;
+}
+
+.vectra-pulse-ring {
+  animation: vectra-pulse-ring 3.2s ease-in-out infinite;
+}
+
+.vectra-beam-sweep {
+  animation: vectra-beam-sweep 6s ease-in-out infinite;
+}
+
+.vectra-scene-in {
+  animation: vectra-scene-in 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.vectra-dash-flow {
+  animation: vectra-dash-flow 1.8s linear infinite;
+}
+
+.vectra-stage[data-paused='true'] .vectra-float,
+.vectra-stage[data-paused='true'] .vectra-orbit,
+.vectra-stage[data-paused='true'] .vectra-orbit-reverse,
+.vectra-stage[data-paused='true'] .vectra-pulse-ring,
+.vectra-stage[data-paused='true'] .vectra-beam-sweep,
+.vectra-stage[data-paused='true'] .vectra-dash-flow {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-stage-enter,
+  .vectra-float,
+  .vectra-orbit,
+  .vectra-orbit-reverse,
+  .vectra-pulse-ring,
+  .vectra-beam-sweep,
+  .vectra-scene-in,
+  .vectra-dash-flow {
+    animation: none;
+  }
+}
+

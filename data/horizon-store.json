@@ -1,0 +1,65 @@
+{
+  "users": {
+    "stu_demo_01": {
+      "id": "stu_demo_01",
+      "email": "aarav.sharma@student.edu",
+      "fullName": "Aarav Sharma",
+      "passwordHash": "1538de7fa509205bd32568a00d3ca9e3625ff75fc2eca7f336848195b1ab74df548a35d864d4c6b40b01b5c3c035dc4b0d1a4dd48179944323d9d21d2c4fac8b",
+      "salt": "d2dbde8b8f256e0b22727dce0092a33c",
+      "createdAt": "2026-11-16T13:27:27.995Z"
+    }
+  },
+  "sessions": {
+    "fea148163f1b76037d3b979a11e0801cb9e6d1ae1caf1fca": "stu_demo_01"
+  },
+  "workspaces": {
+    "stu_demo_01": {
+      "profile": {
+        "fullName": "Aarav Sharma",
+        "email": "aarav.sharma@student.edu",
+        "educationStage": "12th Standard",
+        "academicStream": "Science & Mathematics",
+        "topSubjects": [
+          "Mathematics",
+          "Computer Science",
+          "Physics"
+        ],
+        "curiosities": "",
+        "workPreference": "Building interactive systems and solving analytical puzzles",
+        "longTermGoal": ""
+      },
+      "interview": {
+        "messages": [],
+        "phase": 1,
+        "phaseLabel": "AI Introduction & Warmup",
+        "isComplete": false,
+        "suggestedReplies": [],
+        "demonstratedAbilities": [],
+        "interestsSummary": [],
+        "strengthsSummary": []
+      },
+      "recommendations": [],
+      "selectedCareerId": null,
+      "compareCareerIds": [],
+      "roadmap": [],
+      "completedMissionIds": [],
+      "missionResults": {},
+      "skills": {
+        "Analytical Reasoning": 52,
+        "Systems Architecture": 46,
+        "Applied Mathematics": 50,
+        "Communication": 54,
+        "Execution & Delivery": 48
+      },
+      "unlockedBuildingIds": [
+        "building-admissions",
+        "building-mentor"
+      ],
+      "mentorHistory": [],
+      "satisfactionStatus": "undecided",
+      "advancedUnlocked": false,
+      "progressAnalytics": null,
+      "updatedAt": "2026-11-16T13:27:27.996Z"
+    }
+  }
+}
