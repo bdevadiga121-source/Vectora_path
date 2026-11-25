@@ -1,11 +1,10 @@
 {
-  "projectId": "gen-lang-client-00682662-42d52",
+   "projectId": "ceremonial-goods-cv0ns",
   "appId": "1:346878662048:web:7b9ef8afad80e30323c0c5",
   "apiKey": "AIzaSyD5WAVrqUSA9iSyEap0fV50JxxhrZLABQU",
-  "authDomain": "ceremonial-goods-cv0ns.firebaseapp.com",
+   "authDomain": "ceremonial-goods-cv0ns.firebaseapp.com",
   "storageBucket": "ceremonial-goods-cv0ns.firebasestorage.app",
   "messagingSenderId": "346878662048",
-  "measurementId": "",
   "oAuthClientId": "346878662048-98qe6oihddukbekt2um4ms0gm3ougibp.apps.googleusercontent.com",
   "recaptchaSiteKey": ""
 }
